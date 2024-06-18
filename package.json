@@ -1,0 +1,29 @@
+{
+  "name": "bg-splitter",
+  "version": "1.0.0",
+  "description": "Splits wide background images into square tiles for compression and device compatibility",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "package": "pkg ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jimp": "^0.22.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.3"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "assets": "views/**/*",
+    "targets": [
+      "node16-win-x64",
+      "node16-macos-x64"
+    ],
+    "outputPath": "bin"
+  }
+}
